@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/images/samuel.png') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    background: transparent; /* Mantém sem cor de fundo */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+button {
+    background-color: #00bcd4;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #008c9e;
+    transform: scale(1.05);
+}
+
+#confirmarBtn {
+    margin-top: 20px;
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #4caf50;
+}
+
+#botaoSecreto {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #ff5722;
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#botaoSecreto:hover {
+    background-color: #e64a19;
+    transform: scale(1.2);
+}
+
+/* Animação Loading */
+@keyframes loadingDots {
+    0% { content: 'Loading'; }
+    25% { content: 'Loading.'; }
+    50% { content: 'Loading..'; }
+    75% { content: 'Loading...'; }
+    100% { content: 'Loading'; }
+}
+
+.atracao h2::after {
+    content: 'Loading';
+    animation: loadingDots 1.5s infinite steps(4);
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1.1rem;
+        padding: 14px 30px;
+    }
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 80px;
+        justify-content: center; /* Centraliza melhor o conteúdo */
+    }
+    .container {
+        max-width: 600px;
+        padding: 40px;
+        text-align: center; /* Garante que tudo dentro fique alinhado */
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    button {
+        font-size: 1.3rem;
+        padding: 18px 40px;
+    }
+    #mensagem {
+        font-size: 1.4rem;
+    }
+}
