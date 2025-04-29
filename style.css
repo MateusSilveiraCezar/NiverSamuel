@@ -101,6 +101,28 @@ button:hover {
     animation: loadingDots 1.5s infinite steps(4);
 }
 
+.mensagem-bebida {
+    font-size: 1.2rem;
+    color: #4caf50;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    display: inline-block;
+    margin-top: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+
 /* RESPONSIVIDADE */
 @media (min-width: 600px) {
     h1 {
